@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../_CODE_/_SITES_/_Shadowplayers/jeopardy_st"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "jeopardy_st"
+	}
+}
