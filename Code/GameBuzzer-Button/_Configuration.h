@@ -4,8 +4,8 @@
 
 namespace Configuration{
 
-	//const ButtonColor myColor = RED;
-	const ButtonColor myColor = YELLOW;
+	const ButtonColor myColor = RED;
+	//const ButtonColor myColor = YELLOW;
 	//const ButtonColor myColor = GREEN;
 	//const ButtonColor myColor = BLUE;
 	//const ButtonColor myColor = WHITE;
