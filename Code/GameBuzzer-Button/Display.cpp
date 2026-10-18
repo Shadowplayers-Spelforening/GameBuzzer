@@ -17,10 +17,10 @@ const char * Display::keyboardHighlightKey = nullptr;
 uint32_t Display::keyboardHighlightUntil = 0;
 bool Display::textDirty = true;
 
-const uint16_t Display::TOUCH_TOP = 3746;        // x = bottom to top
-const uint16_t Display::TOUCH_BOTTOM = 400;
-const uint16_t Display::TOUCH_LEFT = 780;
-const uint16_t Display::TOUCH_RIGHT = 3650;      // y = left to right
+const uint16_t Display::TOUCH_TOP = Configuration::TOUCH_TOP;        // x = bottom to top
+const uint16_t Display::TOUCH_BOTTOM = Configuration::TOUCH_BOTTOM;
+const uint16_t Display::TOUCH_LEFT = Configuration::TOUCH_LEFT;
+const uint16_t Display::TOUCH_RIGHT = Configuration::TOUCH_RIGHT;      // y = left to right
 
 int16_t preX = 0;
 int16_t preY = 0; 
@@ -832,7 +832,9 @@ void Display::loop(){
 		TS_Point p = ts.getPoint();
 		const int32_t rawX = p.x;
 		const int32_t rawY = p.y;
-		//Serial.printf("X: %i, Y: %i\n", rawX, rawY);
+		
+		if( state == STATE_TEXT )
+			Serial.printf("X: %i, Y: %i\n", rawX, rawY);
 
 		const int32_t minRawX = min((int32_t)Display::TOUCH_TOP, (int32_t)Display::TOUCH_BOTTOM);
 		const int32_t maxRawX = max((int32_t)Display::TOUCH_TOP, (int32_t)Display::TOUCH_BOTTOM);
