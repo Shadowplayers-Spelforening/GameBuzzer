@@ -6,8 +6,49 @@
 #include <LittleFS.h>
 #include "Netmanager.h"
 
+static void handleSerialDisplayCommands(){
+	static char serialBuffer[32];
+	static size_t serialBufferLen = 0;
 
+	while( Serial.available() > 0 ){
 
+		char c = Serial.read();
+		if( c == '\r' )
+			continue;
+		if( c == '\n' ){
+
+			serialBuffer[serialBufferLen] = '\0';
+			if( serialBufferLen > 0 ){
+
+				String cmd = String(serialBuffer);
+				cmd.trim();
+				if( cmd.equalsIgnoreCase("KEYBOARD") ){
+					Display::setStateKeyboard();
+					Serial.println("Display state -> KEYBOARD");
+				}
+				else if( cmd.equalsIgnoreCase("NUMPAD") ){
+					Display::setStateNumpad();
+					Serial.println("Display state -> NUMPAD");
+				}
+				else if( cmd.equalsIgnoreCase("TEXT") ){
+					Display::setStateText();
+					Serial.println("Display state -> TEXT");
+				}
+				else if( cmd.equalsIgnoreCase("RESET") ){
+					ESP.restart();
+				}
+
+			}
+			serialBufferLen = 0;
+			continue;
+
+		}
+
+		if( serialBufferLen < sizeof(serialBuffer) - 1 )
+			serialBuffer[serialBufferLen++] = c;
+
+	}
+}
 
 void setup(){
 
@@ -34,6 +75,8 @@ void setup(){
 }
 
 void loop(){
+	
+	handleSerialDisplayCommands();
 	
 	if( Button::loop() ){
 
