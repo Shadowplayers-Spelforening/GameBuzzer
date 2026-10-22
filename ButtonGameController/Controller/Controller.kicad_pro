@@ -60,12 +60,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "lib_footprint_issues|99944134|145953146|0a6a4fd9-b6f4-48c8-9a19-618a2274fa39|00000000-0000-0000-0000-000000000000",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -574,6 +569,10 @@
       {
         "netclass": "HP",
         "pattern": "*HP_*"
+      },
+      {
+        "netclass": "HP",
+        "pattern": "+5V"
       }
     ]
   },
@@ -789,7 +788,7 @@
         "uuid": "e6232cda-d5c6-423c-af59-e528087dcf2d"
       }
     ],
-    "used_designators": "R16-17,J3-4,#PWR27,#PWR51,#PWR88",
+    "used_designators": "#PWR28",
     "variants": []
   },
   "sheets": [

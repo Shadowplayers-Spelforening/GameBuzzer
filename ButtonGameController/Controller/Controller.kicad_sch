@@ -7053,7 +7053,17 @@
 		)
 		(uuid "487a9364-9a1b-4f73-a9c4-1c3ce04d0534")
 	)
-	(label "MP_BB_G"
+	(label "HP_5V_FUSED"
+		(at 124.46 148.59 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "6462a28a-7a2b-4c1f-93f0-5a34847a1b07")
+	)
+	(label "MP_BB_A"
 		(at 25.4 44.45 0)
 		(effects
 			(font
@@ -7062,6 +7072,16 @@
 			(justify left bottom)
 		)
 		(uuid "7ad488b7-1ee0-4d14-89ce-a11e6376aca0")
+	)
+	(label "MP_BB_C"
+		(at 25.4 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8baa4335-3eab-47e5-b989-50bdd15f505b")
 	)
 	(global_label "CS"
 		(shape input)
@@ -8516,6 +8536,84 @@
 			(project "Controller"
 				(path "/e6232cda-d5c6-423c-af59-e528087dcf2d"
 					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V8")
+		(at 25.4 29.21 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1b333071-c44a-4c4f-ac76-838a1c724c6a")
+		(property "Reference" "#PWR028"
+			(at 25.4 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V8"
+			(at 25.4 24.13 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 25.4 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25.4 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V8\""
+			(at 25.4 29.21 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "50e19aa4-71fe-4fc6-b1df-ed3690b05ce4")
+		)
+		(instances
+			(project "Controller"
+				(path "/e6232cda-d5c6-423c-af59-e528087dcf2d"
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -14250,83 +14348,6 @@
 			(project "Controller"
 				(path "/e6232cda-d5c6-423c-af59-e528087dcf2d"
 					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+BATT")
-		(at 25.4 29.21 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d4e0300c-5b8b-4a2c-84a4-82d89ec82f5e")
-		(property "Reference" "#PWR037"
-			(at 25.4 33.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "+BATT"
-			(at 25.781 24.8158 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 25.4 29.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 25.4 29.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 25.4 29.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "573b1186-4705-4070-8393-08dadc83f337")
-		)
-		(instances
-			(project "Controller"
-				(path "/e6232cda-d5c6-423c-af59-e528087dcf2d"
-					(reference "#PWR037")
 					(unit 1)
 				)
 			)
